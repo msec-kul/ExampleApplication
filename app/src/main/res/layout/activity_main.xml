@@ -8,27 +8,49 @@
     tools:context="be.kuleuven.msec.iot.myapplication.MainActivity">
 
     <Button
-        android:id="@+id/on_button"
+        android:id="@+id/light_on_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="buttonOnPush"
-        android:text="ON!"
-        app:layout_constraintBottom_toTopOf="@id/temperature_textview"
+        android:onClick="buttonLightOnPush"
+        android:text="Light ON!"
+        app:layout_constraintBottom_toTopOf="@id/plug_on_button"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/off_button"
+        app:layout_constraintRight_toLeftOf="@id/light_off_button"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
-        android:id="@+id/off_button"
+        android:id="@+id/light_off_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="buttonOffPush"
-        android:text="OFF!"
-        app:layout_constraintBottom_toTopOf="@id/temperature_textview"
-        app:layout_constraintLeft_toRightOf="@id/on_button"
+        android:onClick="buttonLightOffPush"
+        android:text="Light OFF!"
+        app:layout_constraintBottom_toTopOf="@id/plug_off_button"
+        app:layout_constraintLeft_toRightOf="@id/light_on_button"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+
+    <Button
+        android:id="@+id/plug_on_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonPlugOnPush"
+        android:text="Plug ON!"
+        app:layout_constraintBottom_toTopOf="@id/temperature_textview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/plug_off_button"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/plug_off_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buttonPlugOffPush"
+        android:text="Plug OFF!"
+        app:layout_constraintBottom_toTopOf="@id/temperature_textview"
+        app:layout_constraintLeft_toRightOf="@id/plug_on_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <TextView
         android:id="@+id/temperature_textview"
         android:layout_width="match_parent"
@@ -38,7 +60,7 @@
         app:layout_constraintBottom_toTopOf="@id/pressure_textview"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/on_button"/>
+        app:layout_constraintTop_toBottomOf="@id/plug_on_button"/>
 
     <TextView
         android:id="@+id/pressure_textview"

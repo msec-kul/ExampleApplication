@@ -16,6 +16,7 @@ import be.kuleuven.msec.iot.iotframework.generic.devicelayer.TemperatureSensor;
 import be.kuleuven.msec.iot.iotframework.generic.devicelayer.VirtualIoTConnector;
 import be.kuleuven.msec.iot.iotframework.generic.devicelayer.VirtualIoTDevice;
 import be.kuleuven.msec.iot.iotframework.implementations.lamps.huelamp.HueGateway;
+import be.kuleuven.msec.iot.iotframework.implementations.plugs.tplinkhs110.HS110Connector;
 import be.kuleuven.msec.iot.iotframework.implementations.sensorkits.allthingstalk.AllThingsTalkGateway;
 import be.kuleuven.msec.iot.iotframework.implementations.sensorkits.versasense.VersaSenseGateway;
 import be.kuleuven.msec.iot.iotframework.systemmanagement.constants.Connector_constants;
@@ -90,6 +91,9 @@ public class ApplicationEnvironment extends Environment {
                             break;
                         case Connector_constants.CONNECTORTYPE_VERSASENSE:
                             virtualIoTConnectors.add(new VersaSenseGateway(connector.getSystemID(), connector.getSettings()));
+                            break;
+                        case Connector_constants.CONNECTORTYPE_TPLINKPLUG:
+                            virtualIoTConnectors.add(new HS110Connector(connector.getSystemID(), connector.getSettings()));
                             break;
                     }
                 }
