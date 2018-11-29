@@ -1,0 +1,156 @@
+{
+  "connectors": [
+    {
+      "systemID": "HGW1",
+      "type": "HUE_CONNECTOR",
+      "settings": {
+        "ip":"192.168.42.2",
+        /*"vVRoYEsRfD2Q6WOprxzZYACQgmfxTapER-SKIlCd"*/
+        "authID":"LgSxfohLpHDIhpJeC8JuR5SU9vIE0NHrF-4Rchju"
+      }
+    },
+    {
+      "systemID": "ATT1",
+      "type": "ATT_CONNECTOR",
+      "settings": {
+        "address": "https://smiot.allthingstalk.io",
+        "username":"IotMsec",
+        "password":"1nternetOfThings",
+        "client":"web",
+        "deviceToken":"smiot:4GKXSET2WuDzG0lqFwHO5yloZ4L1HicEASHsQI7"
+      }
+    },
+    {
+      "systemID": "VS1",
+      "type": "VS_CONNECTOR",
+      "settings": {
+        "address": "https://gateway.versasense.com:8889"
+      }
+
+    }
+    /*,{
+      "systemID": "LGW1",
+      "type": "LAMP_CONNECTORTYPE_OSRAM",
+      "initSettings": [
+        "michielwillocx@hotmail.com",
+        "smiotsmiot",
+        "OSR017BE8CD"
+      ]
+    },
+    /*,
+    {
+      "systemID": "ARD1",
+      "type": "SENSOR_CONNECTORTYPE_ARDUINO",
+      "initSettings": [
+        "84:68:3E:00:32:88"
+      ]
+    }*/
+  ],
+  "components": [
+    {
+      "componentName": "Room",
+     /* "childComponents": [
+      ],*/
+      "devices": [
+        {
+          "type": "lamp",
+          "model": "HUE",
+          "systemID": "LAMP1",
+          "settings": {
+            "uniqueID":"00:17:88:01:02:3c:f5:2c-0b"
+          },
+          "connector": "HGW1"
+        },
+        {
+          "type": "temperature_sensor",
+          "model": "VS",
+          "systemID": "TEMP1",
+          "settings": {
+            "mac" : "00-17-0D-00-00-30-E9-A7",
+            "identifier" : "3303/5702"
+          },
+          "connector": "VS1"
+        },
+       /* {
+          "type": "temperature_sensor",
+          "model": "ATT",
+          "systemID": "TEMP1",
+          "settings": {
+            "uniqueID":"Scda4XZgEgRzSAncrSJ2lS3N"
+          },
+          "connector": "ATT1"
+        },*/
+        {
+          "type": "humidity_sensor",
+          "model": "ATT",
+          "systemID": "HUM1",
+          "settings": {
+            "uniqueID":"XeqcapCnMMAXwhypLh5CYwHc"
+          },
+          "connector": "ATT1"
+        },
+        {
+          "type": "pressure_sensor",
+          "model": "ATT",
+          "systemID": "PRES1",
+          "settings": {
+            "uniqueID":"CYn9wAzbSYVj7t89Nh8lPgxf"
+          },
+          "connector": "ATT1"
+        }/*,
+        {
+          "type": "lamp",
+          "model": "LAMP_TYPE_HUE",
+          "uniqueID": "00:17:88:01:02:ac:76:9a-0b",
+          "settings": [],
+          "connector": "HGW1"
+        },
+        {
+          "type": "lamp",
+          "model": "LAMP_TYPE_HUE",
+          "uniqueID": "00:17:88:01:02:dc:2f:97-0b",
+          "settings": [],
+          "connector": "HGW1"
+        },*//*,
+        {
+          "type": "lamp",
+          "model": "LAMP_TYPE_OSRAM",
+          "uniqueID": "A60RGBW 01",
+          "settings": [],
+          "connector": "LGW1"
+        },*/
+        /*{
+          "type": "lamp",
+          "model": "LAMP_TYPE_OSRAM",
+          "uniqueID": "A60RGBW02",
+          "settings": [],
+          "connector": "LGW1"
+        },*/
+        /*
+        {
+          "type": "humidity_sensor",
+          "model": "VERSASENSE_SENSOR",
+          "uniqueID": "00-17-0D-00-00-30-E9-A7/3303/5702",
+          "settings": [],
+          "connector": "VSS1"
+        },
+        {
+          "type": "pressure_sensor",
+          "model": "VERSASENSE_SENSOR",
+          "uniqueID": "00-17-0D-00-00-30-E9-A7/8040/8042",
+          "settings": [],
+          "connector": "VSS1"
+        }*//*,
+        // TODO ATT Air-quality sensor
+        {
+          "type": "lock",
+          "model": "ARDUINO_SENSOR",
+          "uniqueID": "19b10001-e8f2-537e-4f6c-d104768a1214",
+          "settings": [
+          ],
+          "connector": "ARD1"
+        }*/
+      ]
+    }
+  ]
+}
