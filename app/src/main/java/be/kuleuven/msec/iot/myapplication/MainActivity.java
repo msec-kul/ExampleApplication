@@ -8,12 +8,14 @@ import android.widget.TextView;
 import java.util.HashMap;
 import java.util.Map;
 
+
 import be.kuleuven.msec.iot.iotframework.callbackinterfaces.OnEventOccurred;
 import be.kuleuven.msec.iot.iotframework.callbackinterfaces.OnRequestCompleted;
 import be.kuleuven.msec.iot.iotframework.generic.devicelayer.Lamp;
 import be.kuleuven.msec.iot.iotframework.generic.devicelayer.Plug;
 import be.kuleuven.msec.iot.iotframework.generic.devicelayer.PressureSensor;
 import be.kuleuven.msec.iot.iotframework.generic.devicelayer.TemperatureSensor;
+
 
 public class MainActivity extends AppCompatActivity {
 
