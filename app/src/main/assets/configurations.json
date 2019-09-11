@@ -31,7 +31,7 @@
       "systemID": "TPPLUG1",
       "type": "TPLINKPLUG_CONNECTOR",
       "settings": {
-        "ip": "192.168.42.18"
+        "ip": "192.168.42.10"
       }
 
     }
@@ -54,7 +54,7 @@
           "model": "VS",
           "systemID": "TEMP1",
           "settings": {
-            "mac" : "00-17-0D-00-00-30-E9-A7",
+            "mac" : "00-17-0D-00-00-30-E9-62",
             "identifier" : "3303/5702"
           },
           "connector": "VS1"
@@ -80,7 +80,7 @@
         {
           "type": "smart_plug",
           "model": "TPPLUG",
-          "systemID": "plug1",
+          "systemID": "PLUG1",
           "settings": {
 
           },
